@@ -5,8 +5,8 @@ In this project I will be creating a social media site akin to facebook or myspa
 ## Requirements
 
 - [x] 1. Use PostgreSQL for your database from the beginning (not SQLite3), that way your deployment will go much more smoothly.
-- [ ] 2. Users must sign in to see anything except the sign in page.
-- [ ] 3. User sign-in should use the Devise gem. Devise gives you all sorts of helpful methods so you no longer have to write your own user passwords, sessions, and #current_user methods. See the Railscast on Devise (which uses Rails 3) for a step-by-step introduction. The docs will be fully current.
+- [x] 2. Users must sign in to see anything except the sign in page.
+- [x] 3. User sign-in should use the Devise gem. Devise gives you all sorts of helpful methods so you no longer have to write your own user passwords, sessions, and #current_user methods. See the Railscast on Devise (which uses Rails 3) for a step-by-step introduction. The docs will be fully current.
 - [ ] 4. Users can send follow requests to other users.
 - [ ] 5. Users can create posts (begin with text only).
 - [ ] 6. Users can like posts.
