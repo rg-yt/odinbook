@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :validatable
   has_many :posts
   has_many :comments
+  has_many :likes
   has_many :followings
   has_many :followed_users, through: :followings, source: :followed_user
 end
