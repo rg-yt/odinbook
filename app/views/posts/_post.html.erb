@@ -4,4 +4,5 @@
     <%= post.user.profile.username %> <%= time_ago_in_words(post.created_at) %> ago
   </h2>
   <p><%= post.body %></p>
+  <p>Likes: <%= post.likes.count %></p>
 </div>
