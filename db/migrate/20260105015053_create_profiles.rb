@@ -8,5 +8,14 @@ class CreateProfiles < ActiveRecord::Migration[8.1]
 
       t.timestamps
     end
+
+    add_index :profiles, :username, unique: true
+
+
+    User.find_each do |user|
+      if user.profile.nil?
+        user.create_profile!(username: user.email.split("@").first)
+      end
+    end
   end
 end
