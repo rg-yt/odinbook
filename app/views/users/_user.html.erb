@@ -1,4 +1,4 @@
 <h1><%= user.profile.username %></h1>
-<% if current_user.followed_users.include? user %>
-  <%= button_to "Follow User" %>
+<% unless current_user.followed_users.include? user %>
+  <%= button_to "Follow User", followings_path(followed_user_id: user.id) %>
 <% end %>
