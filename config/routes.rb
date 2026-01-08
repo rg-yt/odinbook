@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "users/index"
   get "profiles/show"
   get "posts/index"
   devise_for :users
