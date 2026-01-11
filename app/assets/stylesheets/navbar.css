@@ -1,0 +1,8 @@
+.navbar {
+  background-color: beige;
+  height: 40px;
+  padding: 1rem;
+  ul {
+    display: flex;
+  }
+}
