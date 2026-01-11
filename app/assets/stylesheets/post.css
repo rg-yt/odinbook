@@ -7,20 +7,40 @@
   margin-right: auto;
   color: #6c543e;
   min-width: 520px;
-  .header{
+  overflow: hidden;
+
+  .header {
     font-size: var(--font-size-xxl);
-    font-family: "Gorditas";
     display: flex;
     justify-content: space-between;
     align-items: end;
     position: relative;
     top: 1rem;
   }
-  img{
+
+  .image_container {
     position: relative;
+    top: 3rem;
+    right: 1rem;
+  }
+
+  img {
     width: 15rem;
     height: auto;
-    top: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .oval {
+    width: 150px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.539);
+    border-radius: 50%;
+    filter: blur(1rem);
+    clip-path: ellipse(100% 50% at 50% 100%);
+    position: absolute;
+    bottom: .1rem;
+    right: 2rem;
   }
 }
 .post {
@@ -29,7 +49,8 @@
   border: 4px solid #6c543e;
   border-radius: 1rem;
   padding: 1rem;
-  h1{
+
+  h1 {
     font-size: var(--font-size-l);
   }
 }
