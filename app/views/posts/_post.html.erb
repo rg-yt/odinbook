@@ -1,5 +1,6 @@
 <div class="post">
   <h1><%= post.title %></h1> 
+  <img src="<%= post.user.profile.profile_picture_url%>" alt="<%= post.user.profile.username%> profile picture">
   <h2>
     <%= post.user.profile.username %> <%= time_ago_in_words(post.created_at) %> ago
   </h2>
