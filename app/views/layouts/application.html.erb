@@ -27,8 +27,13 @@
   </head>
 
   <body>
+    <% unless controller_name == "sessions" || controller_name == "registrations" %>
+      <%= render 'layouts/navbar' %> 
+    <% end %>
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+
     <%= yield %>
   </body>
 </html>
