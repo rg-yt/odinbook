@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_01_05_044420) do
+ActiveRecord::Schema[8.1].define(version: 2026_01_12_043920) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -57,6 +57,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_01_05_044420) do
     t.text "bio"
     t.datetime "created_at", null: false
     t.string "location"
+    t.string "profile_picture_url", default: "https://wallpapers-clan.com/wp-content/uploads/2022/12/sanrio-pfp-6.jpg"
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false
     t.string "username"

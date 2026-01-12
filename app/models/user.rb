@@ -5,10 +5,10 @@ class User < ApplicationRecord
   devise :omniauthable, omniauth_providers: [ :google_oauth2 ]
   after_create :create_profile
   has_one :profile, dependent: :destroy
-  has_many :posts
-  has_many :comments
-  has_many :likes
-  has_many :followings
+  has_many :posts, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :followings, dependent: :destroy
   has_many :followed_users, through: :followings, source: :followed_user
 
 
@@ -21,11 +21,14 @@ class User < ApplicationRecord
            password: Devise.friendly_token[0, 20]
         )
     end
+    user.profile.update(profile_picture_url: data["image"])
     user
   end
   private
 
   def create_profile
+    return if self.profile.present?
+
     Profile.create(user_id: self.id, username: self.email.split("@")[0])
   end
 end
