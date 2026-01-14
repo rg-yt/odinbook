@@ -76,9 +76,6 @@
     
   }
 
-  & .title {
-  }
-
   & .divider {
     border-bottom: 2px solid #6c543e;
     margin-bottom: 1rem;
@@ -87,5 +84,9 @@
 
   & .content {
     flex-grow: 1;
+  }
+
+  & button {
+    width: 100%
   }
 }
