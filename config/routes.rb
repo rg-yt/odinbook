@@ -17,4 +17,5 @@ Rails.application.routes.draw do
   root "posts#index"
   resources :profiles, only: [ :show ]
   resources :followings, only: [ :create ]
+  resources :users, only: [ :index ]
 end
