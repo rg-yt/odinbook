@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get "users/index"
-  get "profiles/show"
-  get "posts/index"
   devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -14,6 +11,7 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   # Defines the root path route ("/")
+  resources :posts, only: [ :index, :new, :create ]
   root "posts#index"
   resources :profiles, only: [ :show ]
   resources :followings, only: [ :create ]
