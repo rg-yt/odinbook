@@ -1,8 +1,29 @@
 .navbar {
   background-color: beige;
-  height: 40px;
+  height: 2rem;
   padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.153);
   ul {
     display: flex;
+    gap: 1rem
   }
+
+  img {
+    height: 4rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: #6c543e;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  
 }

@@ -8,6 +8,7 @@
   color: #6c543e;
   min-width: 520px;
   overflow-wrap: auto;
+  margin-top: -4rem;
   /* overflow: hidden; */
 
   .banner{
