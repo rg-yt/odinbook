@@ -12,6 +12,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
+        format.html { redirect_to root_path, notice: "Your post was successfully created!" }
         format.turbo_stream
       else
         format.html { render :new, status: :unprocessable_entity }
