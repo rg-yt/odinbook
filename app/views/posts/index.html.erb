@@ -6,5 +6,9 @@
       <div class="oval"></div>
     </div>
   </div>
-  <%= render @posts %>
+  <%= turbo_frame_tag :new_post, src: new_post_path %>
+  <%= turbo_frame_tag :posts do %> 
+    <%= render @posts %>
+  <% end %>
+
 </div>
