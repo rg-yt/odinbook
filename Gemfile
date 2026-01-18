@@ -54,7 +54,7 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 
 
-  gem "guard", "~> 2.19"
+  gem "guard", "~> 2.20"
 end
 
 group :development do
