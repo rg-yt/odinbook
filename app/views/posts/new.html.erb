@@ -1,9 +1,13 @@
 <%= turbo_frame_tag :new_post do %>
-  <%= form_with model: @post do |form| %>
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-    <%= form.label :body %>
-    <%= form.text_area :body %>
+  <%= form_with model: @post, class: "post_form" do |form| %>
+    <div>
+      <%= form.label :title %>
+      <%= form.text_field :title %>
+    </div>
+    <div>
+      <%= form.label :body %>
+      <%= form.text_area :body %>
+    </div>
     <%= form.submit %>
   <% end %>
 <% end %>
