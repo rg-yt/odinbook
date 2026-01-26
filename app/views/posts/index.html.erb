@@ -6,12 +6,11 @@
       <div class="oval"></div>
     </div>
   </div>
-  <%= turbo_frame_tag :new_post do %>
+  <%= turbo_frame_tag :new_post, class: "post_form" do %>
     Create a new Post to share with friends!~
     <%= button_to "New Post", new_post_path, method: :get %> 
   <% end %>
   <%= turbo_frame_tag :posts do %> 
     <%= render @posts %>
   <% end %>
-
 </div>
